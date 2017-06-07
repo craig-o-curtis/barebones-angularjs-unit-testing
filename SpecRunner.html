@@ -16,13 +16,22 @@
         <script type="text/javascript" src="lib/jasmine-2.3.4/boot.js"></script>
         <script type="text/javascript" src="src/scripts/angular/angular.js"></script>
         <script type="text/javascript" src="src/scripts/angular/angular-mocks.js"></script>
+        <script type="text/javascript" src="src/scripts/angular/angular-route.js"></script>
+
+        <!-- No Karma to automagically populate these... -->
 
         <!-- include source files -->
+        <script type="text/javascript" src="src/app/app.js"></script>
+        <script type="text/javascript" src="src/app/Expense/expenses.controller.js"></script>
+        <script type="text/javascript" src="src/app/Expense/expenses.service.js"></script>
         <script type="text/javascript" src="src/app/Expense/Expense.js"></script>
         <script type="text/javascript" src="src/app/Expense/ExpenseItem.js"></script>
+        
 
         <!-- include spec files -->
         <script type="text/javascript" src="spec/ExpenseSpec.js"></script>
+        <script type="text/javascript" src="spec/expenses.controller.spec.js"></script>
+        <script type="text/javascript" src="spec/expenses.service.spec.js"></script>
 
     </body>
 </html>

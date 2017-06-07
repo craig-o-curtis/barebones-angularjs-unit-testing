@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="expenseApp">
+<html lang="en" ng-app="expensesApp">
     <head>
-        <title></title>
+        <title>Expenses Demo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="Content/bootstrap.css" rel="stylesheet">
+        <style>
+            body {
+                font-size: 16px;
+                margin: 6rem 0 0 1rem;
+            }
+        </style>
     </head>
     <body>
     
+        <div ng-include="'app/layout/topNav.html'"></div>
 
+        <div>
+            <div ng-view></div>
+        </div>
 
-
-
-
-        <script src="scripts/bootstrap/bootstrap.min.js"></script>
-        <script src="scripts/angular/angular.min.js"></script>
-        <script src="scripts/angular/angular-mocks.js"></script>
+        <!-- vendor -->
+        <script type="text/javascript" src="scripts/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/angular/angular.min.js"></script>
+        <script type="text/javascript" src="scripts/angular/angular-mocks.js"></script>
+        <script type="text/javascript" src="scripts/angular/angular-route.js"></script>
+        
+        <!-- custom -->
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/Expense/Expense.js"></script>
+        <script type="text/javascript" src="app/Expense/ExpenseItem.js"></script>
+        <script type="text/javascript" src="app/Expense/expenses.controller.js"></script>
+        <script type="text/javascript" src="app/Expense/expenses.service.js"></script>
 
     </body>
 </html>
