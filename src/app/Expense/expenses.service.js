@@ -1,24 +1,36 @@
 (function(){
-    'use strict';
+    'use strict'
 
     angular.module('expensesApp')
         .factory('expensesService', ['$http', expensesService]);
 
-    // definition
-    function expensesService($http) {
+    function expensesService($http){
         var service = {
-            getExpenses: getExpenses
+            getExpenses: getExpenses,
+            persistExpenses: persistExpenses
         };
 
         return service;
 
-        // definition
-        function getExpenses() {
+        function getExpenses(){
             return [
-                {title: 'Taxi', description: 'To airport', amount: 69.95},
-                {title: 'Lunch', description: 'At airport', amount: 19.95},
-                {title: 'Coffee', description: 'In airport', amount: 4.95}
-            ];
+                new ExpenseItem('Taxi', 'To airport',  89.95),
+                new ExpenseItem('Dinner', 'At airport', 15.40),
+                new ExpenseItem('Coffee','Starbucks', 4.93)
+            ]
+        }
+
+        function reportExpenses(){
+            // some work
+            return;
+        }
+
+        function persistExpenses(reportExpenses){
+            // do some work
+            var success = true;
+            if (success){
+                reportExpenses();
+            }
         }
     }
 })();
